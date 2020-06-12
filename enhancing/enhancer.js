@@ -14,23 +14,23 @@ function succeed(item) {
     }
     return success
   } else {
-    const err = "Enhancement is above 20, no handouts"
+    const err = "Enhancement is above 20, full optimization achieved"
     return (err)
   }
  
 }
 
 function fail(item) {
-  const weakenD5 = item.durability - 5
-  const weakenD10 = item.durability - 10
-  const weakenE = item.enhancement - 1
+  const strike = item.durability - 5
+  const strike2 = item.durability - 10
+  const strike3 = item.enhancement - 1
 
   if (item.enhancement < 15) {
-    return ({ ...item, durability: weakenD5 })
+    return ({ ...item, durability: strike })
   } else if (item.enhancement >= 15) {
-    return ({ ...item, durability: weakenD10 })
+    return ({ ...item, durability: strike2 })
   } else if (item.enhancement > 16) {
-    return ({ ...item, enhancement: weakenE })
+    return ({ ...item, enhancement: strike3 })
   } else {
     return { ...item, };
   }
@@ -47,7 +47,5 @@ function repair(item) {
     return mend
 }
 
-// function get(item) {
-//   return { ...item };
-// }
-}
+};
+
